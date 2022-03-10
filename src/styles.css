@@ -133,3 +133,8 @@ form {
 .forecast-temp-max {
   font-weight: 700;
 }
+.open-source {
+  font-size: 12px;
+  font-family: "Fira Mono", monospace;
+  color: #000;
+}
