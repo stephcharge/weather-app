@@ -1,0 +1,135 @@
+body {
+  text-align: center;
+
+  background: rgb(182, 216, 238);
+  background: linear-gradient(
+    108deg,
+    rgba(182, 216, 238, 0.7721682422969187) 0%,
+    rgba(255, 210, 232, 0.6993391106442577) 30%,
+    rgba(255, 226, 184, 0.640515581232493) 100%
+  );
+  background-attachment: fixed;
+  font-family: "Fira Mono", monospace;
+}
+h1 {
+  font-size: 70px;
+  font-family: "Prata", serif;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+form {
+  padding: 40px;
+}
+.search-city {
+  background: #eeecfc;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 0px 15px;
+  width: 200px;
+}
+.search-city-button {
+  border-color: rgb(128, 128, 128);
+  border-radius: 0px;
+  background-color: #ffffff;
+  box-shadow: 0.3rem 0.3rem #eeecfc;
+  padding: 8px;
+  margin: 0px, 10px;
+}
+.search-city-button:hover {
+  border-color: rgb(128, 128, 128);
+  border-radius: 0px;
+  background-color: rgb(250, 228, 228);
+  box-shadow: 5px 5px 5px rgb(225, 212, 248);
+  padding: 8px;
+  margin: 0px, 10px;
+  transition: all 100ms ease-in-out;
+}
+.current-location-button {
+  border-color: rgb(128, 128, 128);
+  border-radius: 0px;
+  background-color: #ffffff;
+  box-shadow: 0.3rem 0.3rem rgba(247, 223, 204, 0.6);
+  padding: 8px;
+  margin: 0px, 10px;
+}
+.current-location-button:hover {
+  border-color: rgb(128, 128, 128);
+  border-radius: 0px;
+  background-color: rgb(250, 228, 228);
+  box-shadow: 5px 5px 5px rgb(221, 171, 97, 0.6);
+  padding: 8px;
+  margin: 0px, 10px;
+  transition: all 100ms ease-in-out;
+}
+.day-time {
+  font-size: 30px;
+}
+.daily-container {
+  padding: 100px 20px 0px 20px;
+}
+.weather-favicon {
+  font-size: 70px;
+}
+.temperature {
+  font-size: 70px;
+  font-weight: bolder;
+  font-family: "Prata", serif;
+}
+.temp-min {
+  font-size: 20px;
+}
+.temp-max {
+  font-size: 20px;
+  font-weight: bolder;
+}
+.weather-description {
+  font-size: 25px;
+  text-transform: capitalize;
+}
+.sunrise-sunset {
+  font-size: 15px;
+  padding: 15px;
+}
+.container {
+  max-width: 80%;
+}
+.card {
+  margin: 50px 20px;
+  border-radius: 30px;
+}
+.five-day-forecast {
+  margin-top: 50px;
+  font-size: 18px;
+  font-family: "Fira Mono", monospace;
+}
+.forecast-body {
+  background: rgba(204, 226, 247, 0.6);
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 0px 0px 20px 0px;
+}
+.forecast-body:hover {
+  background: rgb(225, 212, 248);
+  border: none;
+  border-radius: 4px;
+  cursor: default;
+  padding: 10px;
+  transition: all 200ms ease-in-out;
+}
+.forecast-day {
+  font-size: 18px;
+  font-family: "Fira Mono", monospace;
+}
+.weather-icon {
+  padding-top: 10px;
+  font-size: 25px;
+}
+.forecast-temp {
+  font-size: 15px;
+  padding: 10px 10px 20px;
+}
+.forecast-temp-max {
+  font-weight: 700;
+}
