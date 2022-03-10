@@ -7,14 +7,12 @@ function searchCity(event) {
 }
 
 function showTemperature(response) {
-  console.log(response);
-  let h1 = document.querySelector("h1");
-  h1.innerHTML = response.data.name;
-  let temperatureElement = document.querySelector(".temperature");
-  let weatherDescription = document.querySelector(".weather-description");
-  let description = response.data.weather[0].description;
-  temperatureElement.innerHTML = `${Math.round(response.data.main.temp)}°C`;
-  weatherDescription.innerHTML = description;
+  document.querySelector("h1").innerHTML = response.data.name;
+  document.querySelector(".temperature").innerHTML = `${Math.round(
+    response.data.main.temp
+  )}°C`;
+  document.querySelector(".weather-description").innerHTML =
+    response.data.weather[0].description;
 }
 
 function describeCurrentPosition(event) {
