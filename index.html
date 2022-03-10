@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&family=Prata&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Vanilla Weather App</title>
+    <link href="src/style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <form id="search-form">
+            <input
+              type="text"
+              class="search-city"
+              placeholder="Search for a city"
+            />
+            <input
+              type="submit"
+              class="search-city-button"
+              id="search-button"
+              value="🔍 Search"
+            />
+            <input
+              type="button"
+              class="current-location-button"
+              value="📍 Current location"
+            />
+          </form>
+
+          <div class="daily-container">
+            <div class="row">
+              <div class="col-md-12 col-lg">
+                <br />
+                <br />
+                <h1>Brisbane</h1>
+                <div class="day-time">
+                  <span class="day">Wednesday</span> <span class="hour">5:</span
+                  ><span class="minutes">45</span><span class="am">am</span>
+                </div>
+              </div>
+              <div class="col-md-12 col-lg">
+                <div class="weather-favicon">
+                  ⛅️ <span class="temperature"> 26°</span>
+                </div>
+                <br />
+                <div class="temp-min">
+                  21° | <span class="temp-max">29°</span>
+                </div>
+                <div class="weather-description">Slightly cloudy</div>
+                <div class="sunrise-sunset">
+                  <span class="sunrise-time"> ☀️ 5:36am </span
+                  ><span class="sunset-time"> 🌙 6:24pm</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="five-day-forecast">🗓 5-DAY FORECAST</p>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 col-lg">
+                <button class="forecast-body">
+                  <div class="forecast-day">Thursday</div>
+                  <div class="weather-icon">☀️</div>
+                  <div class="forecast-temp">
+                    <span class="forecast-temp-min">22° | </span
+                    ><span class="forecast-temp-max">25°</span>
+                  </div>
+                </button>
+              </div>
+              <div class="col-md-12 col-lg">
+                <button class="forecast-body">
+                  <div class="forecast-day">Friday</div>
+                  <div class="weather-icon">⛅️</div>
+                  <div class="forecast-temp">
+                    <span class="forecast-temp-min">22° | </span
+                    ><span class="forecast-temp-max">25°</span>
+                  </div>
+                </button>
+              </div>
+              <div class="col-md-12 col-lg">
+                <button class="forecast-body">
+                  <div class="forecast-day">Saturday</div>
+                  <div class="weather-icon">⛈</div>
+                  <div class="forecast-temp">
+                    <span class="forecast-temp-min">22° | </span
+                    ><span class="forecast-temp-max">25°</span>
+                  </div>
+                </button>
+              </div>
+              <div class="col-md-12 col-lg">
+                <button class="forecast-body">
+                  <div class="forecast-day">Sunday</div>
+                  <div class="weather-icon">🌧</div>
+                  <div class="forecast-temp">
+                    <span class="forecast-temp-min">22° | </span
+                    ><span class="forecast-temp-max">25°</span>
+                  </div>
+                </button>
+              </div>
+              <div class="col-md-12 col-lg">
+                <button class="forecast-body">
+                  <div class="forecast-day">Monday</div>
+                  <div class="weather-icon">🌤</div>
+                  <div class="forecast-temp">
+                    <span class="forecast-temp-min">22° | </span
+                    ><span class="forecast-temp-max">25°</span>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
