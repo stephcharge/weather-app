@@ -13,6 +13,12 @@ function showTemperature(response) {
   )}°C`;
   document.querySelector(".weather-description").innerHTML =
     response.data.weather[0].description;
+  document.querySelector(".temp-min").innerHTML = Math.round(
+    response.data.main.temp_min
+  );
+  document.querySelector(".temp-max").innerHTML = Math.round(
+    response.data.main.temp_max
+  );
 }
 
 function describeCurrentPosition(event) {
