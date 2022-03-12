@@ -19,6 +19,12 @@ function showTemperature(response) {
   document.querySelector(".temp-max").innerHTML = Math.round(
     response.data.main.temp_max
   );
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
 }
 
 function describeCurrentPosition(event) {
