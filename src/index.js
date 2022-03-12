@@ -7,6 +7,7 @@ function searchCity(event) {
 }
 
 function showTemperature(response) {
+  console.log(response.data);
   document.querySelector("h1").innerHTML = response.data.name;
   document.querySelector(".temperature").innerHTML = `${Math.round(
     response.data.main.temp
@@ -18,6 +19,9 @@ function showTemperature(response) {
   );
   document.querySelector(".temp-max").innerHTML = Math.round(
     response.data.main.temp_max
+  );
+  document.querySelector(".wind-speed").innerHTML = Math.round(
+    response.data.wind.speed
   );
   document
     .querySelector("#icon")
