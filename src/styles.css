@@ -1,6 +1,5 @@
 body {
   text-align: center;
-
   background: rgb(182, 216, 238);
   background: linear-gradient(
     108deg,
@@ -13,6 +12,7 @@ body {
 }
 h1 {
   font-size: 70px;
+  font-size: calc(100% + 1.7vw + 1.7vh);
   font-family: "Prata", serif;
   font-weight: bolder;
   text-transform: capitalize;
@@ -26,7 +26,8 @@ form {
   border-radius: 4px;
   padding: 10px;
   margin: 0px 15px;
-  width: 200px;
+  width: 20%;
+  min-width: 100px;
 }
 .search-city-button {
   border-color: rgb(128, 128, 128);
