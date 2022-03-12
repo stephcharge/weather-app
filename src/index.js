@@ -44,6 +44,29 @@ function showPosition(position) {
   axios.get(`${apiUrlCurrentLocation}`).then(showTemperature);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector(".forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thursday", "Friday", "Saturday", "Sunday", "Monday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-md-12 col-lg">
+    <button class="forecast-body">
+      <div class="forecast-day">${day}</div>
+      <div class="weather-icon">☀️</div>
+      <div class="forecast-temp">
+        <span class="forecast-temp-min">22° | </span>
+        <span class="forecast-temp-max">25°</span>
+      </div>
+    </button>
+  </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();
 let city = "brisbane";
 let apiKey = "c65900082459ba48632547338ca799b1";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
