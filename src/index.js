@@ -71,7 +71,6 @@ function displayForecast(response) {
     "10",
     "11",
   ];
-  console.log(response.data);
   let sunrise = response.data.daily[0].sunrise;
   let sunriseDate = new Date(sunrise * 1000);
   document.querySelector(".sunrise-hour").innerHTML = `${
@@ -106,6 +105,9 @@ function displayForecast(response) {
         forecastDay.weather[0].icon
       }@2x.png" />
       </div>
+      <div class="forecast-description">${
+        forecastDay.weather[0].description
+      }</div>
       <div class="forecast-temp">
         <span class="forecast-temp-min">${Math.round(
           forecastDay.temp.min

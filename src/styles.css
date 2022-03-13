@@ -123,6 +123,9 @@ form {
   font-size: 18px;
   font-family: "Fira Mono", monospace;
 }
+.forecast-description {
+  text-transform: capitalize;
+}
 .weather-icon {
   padding-top: 10px;
   font-size: 25px;
