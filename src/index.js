@@ -13,12 +13,6 @@ function showTemperature(response) {
   )}°C`;
   document.querySelector(".weather-description").innerHTML =
     response.data.weather[0].description;
-  document.querySelector(".temp-min").innerHTML = Math.round(
-    response.data.main.temp_min
-  );
-  document.querySelector(".temp-max").innerHTML = Math.round(
-    response.data.main.temp_max
-  );
   document.querySelector(".wind-speed").innerHTML = Math.round(
     response.data.wind.speed
   );
@@ -51,6 +45,53 @@ function getForecast(coordinates) {
 }
 
 function displayForecast(response) {
+  let hours = [
+    "12",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+  ];
+  console.log(response.data);
+  let sunrise = response.data.daily[0].sunrise;
+  let sunriseDate = new Date(sunrise * 1000);
+  document.querySelector(".sunrise-hour").innerHTML = `${
+    hours[sunriseDate.getHours()]
+  }`;
+  document.querySelector(".sunrise-minutes").innerHTML =
+    `0${sunriseDate.getMinutes()}`.slice(-2);
+  let sunset = response.data.daily[0].sunset;
+  let sunsetDate = new Date(sunset * 1000);
+  document.querySelector(".sunset-hour").innerHTML = `${
+    hours[sunsetDate.getHours()]
+  }`;
+  document.querySelector(".sunset-minutes").innerHTML =
+    `0${sunsetDate.getMinutes()}`.slice(-2);
+  document.querySelector(".temp-min").innerHTML = Math.round(
+    response.data.daily[0].temp.min
+  );
+  document.querySelector(".temp-max").innerHTML = Math.round(
+    response.data.daily[0].temp.max
+  );
   let forecast = response.data.daily;
   let forecastElement = document.querySelector(".forecast");
   let forecastHTML = `<div class="row">`;
