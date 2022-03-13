@@ -11,8 +11,7 @@ body {
   font-family: "Fira Mono", monospace;
 }
 h1 {
-  font-size: 70px;
-  font-size: calc(100% + 1.7vw + 1.7vh);
+  font-size: calc(100% + 2vw + 2vh);
   font-family: "Prata", serif;
   font-weight: bolder;
   text-transform: capitalize;
@@ -93,7 +92,7 @@ form {
   padding: 15px;
 }
 .container {
-  max-width: 80%;
+  max-width: 90%;
 }
 .card {
   margin: 50px 20px;
@@ -110,6 +109,7 @@ form {
   border-radius: 4px;
   padding: 10px;
   margin: 0px 0px 20px 0px;
+  width: 100%;
 }
 .forecast-body:hover {
   background: rgb(225, 212, 248);

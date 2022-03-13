@@ -45,33 +45,56 @@ function showPosition(position) {
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "c65900082459ba48632547338ca799b1";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude={part}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 
 function displayForecast(response) {
-  console.log(response.data);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector(".forecast");
   let forecastHTML = `<div class="row">`;
-  let days = ["Thursday", "Friday", "Saturday", "Sunday", "Monday"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col-md-12 col-lg">
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col-md-12 col-lg">
     <button class="forecast-body">
-      <div class="forecast-day">${day}</div>
-      <div class="weather-icon">☀️</div>
+      <div class="forecast-day">${formatDay(forecastDay.dt)}</div>
+      <div class="weather-icon"><img src="https://openweathermap.org/img/wn/${
+        forecastDay.weather[0].icon
+      }@2x.png" />
+      </div>
       <div class="forecast-temp">
-        <span class="forecast-temp-min">22° | </span>
-        <span class="forecast-temp-max">25°</span>
+        <span class="forecast-temp-min">${Math.round(
+          forecastDay.temp.min
+        )}° | </span>
+        <span class="forecast-temp-max">${Math.round(
+          forecastDay.temp.max
+        )}°</span>
       </div>
     </button>
   </div>`;
+    }
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+}
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  return days[day];
 }
 
 let city = "brisbane";
