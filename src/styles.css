@@ -1,17 +1,11 @@
 body {
   text-align: center;
-  background: rgb(182, 216, 238);
-  background: linear-gradient(
-    108deg,
-    rgba(182, 216, 238, 0.7721682422969187) 0%,
-    rgba(255, 210, 232, 0.6993391106442577) 30%,
-    rgba(255, 226, 184, 0.640515581232493) 100%
-  );
+  background: #e48f76;
   background-attachment: fixed;
   font-family: "Fira Mono", monospace;
 }
 h1 {
-  font-size: calc(100% + 2vw + 2vh);
+  font-size: calc(100% + 2.3vw + 2.3vh);
   font-family: "Prata", serif;
   font-weight: bolder;
   text-transform: capitalize;
@@ -20,8 +14,8 @@ form {
   padding: 40px;
 }
 .search-city {
-  background: #eeecfc;
-  border: none;
+  background: #f3efea;
+  border-color: #000;
   border-radius: 4px;
   padding: 10px;
   margin: 0px 15px;
@@ -29,35 +23,35 @@ form {
   min-width: 100px;
 }
 .search-city-button {
-  border-color: rgb(128, 128, 128);
-  border-radius: 0px;
+  border-color: rgb(0, 0, 0);
+  border-radius: 4px;
   background-color: #ffffff;
-  box-shadow: 0.3rem 0.3rem #eeecfc;
+  box-shadow: 0.3rem 0.3rem #f3efea;
   padding: 8px;
   margin: 0px, 10px;
 }
 .search-city-button:hover {
-  border-color: rgb(128, 128, 128);
-  border-radius: 0px;
-  background-color: rgb(250, 228, 228);
-  box-shadow: 5px 5px 5px rgb(225, 212, 248);
+  border-color: rgb(0, 0, 0);
+  border-radius: 4px;
+  background-color: #e48f76;
+  box-shadow: 0.3rem 0.3rem rgb(0, 0, 0);
   padding: 8px;
   margin: 0px, 10px;
   transition: all 100ms ease-in-out;
 }
 .current-location-button {
-  border-color: rgb(128, 128, 128);
-  border-radius: 0px;
+  border-color: rgb(0, 0, 0);
+  border-radius: 4px;
   background-color: #ffffff;
-  box-shadow: 0.3rem 0.3rem rgba(247, 223, 204, 0.6);
+  box-shadow: 0.3rem 0.3rem #f3efea;
   padding: 8px;
   margin: 0px, 10px;
 }
 .current-location-button:hover {
-  border-color: rgb(128, 128, 128);
-  border-radius: 0px;
-  background-color: rgb(250, 228, 228);
-  box-shadow: 5px 5px 5px rgb(221, 171, 97, 0.6);
+  border-color: rgb(0, 0, 0);
+  border-radius: 4px;
+  background-color: #e48f76;
+  box-shadow: 0.3rem 0.3rem rgba(0, 0, 0);
   padding: 8px;
   margin: 0px, 10px;
   transition: all 100ms ease-in-out;
@@ -66,7 +60,7 @@ form {
   font-size: 30px;
 }
 .daily-container {
-  padding: 100px 20px 0px 20px;
+  padding: 50px 20px 0px 20px;
 }
 .weather-icon {
   font-size: 70px;
@@ -95,16 +89,16 @@ form {
   max-width: 90%;
 }
 .card {
-  margin: 50px 20px;
-  border-radius: 30px;
+  margin: 50px 20px 5px 20px;
+  border-radius: 10px;
+  border-color: #000;
 }
 .five-day-forecast {
-  margin-top: 50px;
   font-size: 18px;
   font-family: "Fira Mono", monospace;
 }
 .forecast-body {
-  background: rgba(231, 242, 253, 0.6);
+  background: #f3efea;
   border: none;
   border-radius: 4px;
   padding: 10px;
@@ -112,7 +106,8 @@ form {
   width: 100%;
 }
 .forecast-body:hover {
-  background: rgb(225, 212, 248);
+  background: #e48f76;
+  box-shadow: 0.3rem 0.3rem rgba(0, 0, 0);
   border: none;
   border-radius: 4px;
   cursor: default;
@@ -140,9 +135,10 @@ form {
 .open-source {
   font-size: 12px;
   font-family: "Fira Mono", monospace;
-  color: rgb(85, 59, 179);
+  color: rgb(0, 0, 0);
+  padding-bottom: 20px;
 }
 
 a {
-  color: rgb(85, 59, 179);
+  color: rgb(255, 255, 255);
 }
