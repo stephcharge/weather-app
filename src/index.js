@@ -204,3 +204,24 @@ if (now.getHours() > 11) {
 } else {
   am.innerHTML = `am`;
 }
+
+let months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+let newMonth = months[now.getMonth()];
+let month = document.querySelector(".month");
+month.innerHTML = `${newMonth}`;
+let newDate = now.getDate();
+let todayDate = document.querySelector(".date");
+todayDate.innerHTML = `${newDate}`;
